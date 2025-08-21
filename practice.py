@@ -19,6 +19,6 @@ else:
             return num1 * num2
         print("The product is:", multiply_numbers(num1, num2))
     elif operator == '/':
-        def divide_numbers(num1, num2):
+        def divide_number(num1, num2):
             return num1 / num2
-        print("The quotient is:", divide_numbers(num1, num2))
+        print("The quotient is:", divide_number(num1, num2))
