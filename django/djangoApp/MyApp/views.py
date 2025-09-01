@@ -4,7 +4,17 @@ from django.http import HttpResponse
 def index(request):
     context = {
         'name': 'Timothy',
-        'age': 24,
-        'nationality': 'Brazilian',
+        'email': 'timothy@example.com',
+        'password': 'Brazilian',
     }
-    return render(request, "index.html", context)
+    message = ""
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        if name == context['name'] and email == context['email'] and password == context['password']:
+            message = "Sign in successful!"
+        else:
+            message = "Sign in failed. Please check your credentials."
+    return render(request, "index.html", {'message': message})
+    

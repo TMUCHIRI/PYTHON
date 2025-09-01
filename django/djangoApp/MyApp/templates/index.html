@@ -1,2 +1,18 @@
-<h1>Hello {{name}}</h1>
-<p>You are {{age}} years old and <br> You are {{nationality}}</p>
+<div class="main">
+    <div class="form">
+        <form method="post">
+    {% csrf_token %}
+    <div class="main">
+        <div class="form">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit">Sign In</button>
+        </div>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+</form>
+    </div>
+</div>
