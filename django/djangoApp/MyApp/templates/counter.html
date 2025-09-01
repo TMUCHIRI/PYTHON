@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="form-area">
+        <form method="post">
+            {% csrf_token %}
+            <textarea name="text" id="text" rows="25" cols="50"></textarea><br>
+            <button type="submit">Count Words</button>
+        </form>
+
+        <p>The amount of words entered is {{ count }}</p>
+    </div>
+</div>

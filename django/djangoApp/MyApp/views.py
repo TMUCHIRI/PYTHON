@@ -17,4 +17,12 @@ def index(request):
         else:
             message = "Sign in failed. Please check your credentials."
     return render(request, "index.html", {'message': message})
-    
+
+def counter(request):
+    text = ""
+    if request.method == "POST":
+        text = request.POST.get('text', '')
+    elif request.method == "GET":
+        text = request.GET.get('text', '')
+    text_count = len(text.split())
+    return render(request, "counter.html", {'count': text_count})
