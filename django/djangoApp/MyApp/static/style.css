@@ -1,0 +1,59 @@
+/* Center the form vertically and horizontally */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #90ee90; /* Light green */
+    color: #222;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #228B22; /* Darker green */
+    color: #fff;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+p strong, p .count {
+    font-weight: bold;
+    color: #228B22;
+}

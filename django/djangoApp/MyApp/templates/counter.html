@@ -1,11 +1,22 @@
-<div class="main">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
     <div class="form-area">
         <form method="post">
             {% csrf_token %}
             <textarea name="text" id="text" rows="25" cols="50"></textarea><br>
             <button type="submit">Count Words</button>
         </form>
-
-        <p>The amount of words entered is {{ count }}</p>
+<p>The amount of words entered is <span class="count">{{ count }}</span></p>
     </div>
 </div>
+</body>
+</html>
